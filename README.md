@@ -52,12 +52,33 @@ Edit
 python fraud_detection.py
 Modify the script to experiment with the dataset, hyperparameters, or model structure.
 Results
-The ANN model was trained for 300 epochs using binary cross-entropy loss and Adam optimizer.
-Key evaluation metrics:
-Precision: Indicates how many identified frauds were actual frauds.
-Recall: Shows the percentage of actual frauds identified.
-F1-Score: Balance between precision and recall.
-Graphs for loss, precision, and recall over epochs are plotted for better understanding.
+Time consumed for training: 1260.5851862430573 seconds
+Model saved successfully!
+2671/2671 ━━━━━━━━━━━━━━━━━━━━ 8s 3ms/step - loss: 0.0251 - precision: 0.7268 - recall: 0.0148
+Model evaluation: [0.024628935381770134, 1.0, 0.022058824077248573]
+
+Reloading the model for validation...
+WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2671/2671 ━━━━━━━━━━━━━━━━━━━━ 6s 2ms/step
+Model Accuracy: 0.9984
+Confusion Matrix:
+ [[85307     0]
+ [  134     2]]
+Classification Report:
+               precision    recall  f1-score   support
+
+      Normal       1.00      1.00      1.00     85307
+       Fraud       1.00      0.01      0.03       136
+
+    accuracy                           1.00     85443
+   macro avg       1.00      0.51      0.51     85443
+weighted avg       1.00      1.00      1.00     85443
+
 
 Contributing
 Contributions are welcome! Feel free to raise issues or submit pull requests to improve this project.
+
+
+
